@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard Grid Layout</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .dashboard {
+      display: grid;
+      height: 100vh;
+
+      /* Grid structure using fr units */
+      grid-template-columns: 220px 1fr 250px;
+      grid-template-rows: 70px 1fr 60px;
+
+      /* Named grid areas */
+      grid-template-areas:
+        "header header header"
+        "nav main aside"
+        "footer footer footer";
+
+      gap: 10px;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
+    .header {
+      grid-area: header;
+      background: #2c3e50;
+      color: white;
+      display: flex;
+      align-items: center;
+      padding-left: 20px;
+      font-size: 20px;
+    }
+
+    .nav {
+      grid-area: nav;
+      background: #34495e;
+      color: white;
+      padding: 20px;
+    }
+
+    .main {
+      grid-area: main;
+      background: #ecf0f1;
+      padding: 20px;
+    }
+
+    .aside {
+      grid-area: aside;
+      background: #bdc3c7;
+      padding: 20px;
+    }
+
+    .footer {
+      grid-area: footer;
+      background: #2c3e50;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Optional styling */
+    .nav ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .nav li {
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="dashboard">
+    <header class="header">Dashboard Header</header>
+
+    <nav class="nav">
+      <h3>Navigation</h3>
+      <ul>
+        <li>Home</li>
+        <li>About us</li>
+        <li>Reports</li>
+        <li>Feedback</li>
+        <li>Settings</li>
+      </ul>
+    </nav>
+
+    <main class="main">
+      <h2>Main Content</h2>
+      <p>This is the main dashboard content area.</p>
+    </main>
+
+    <aside class="aside">
+      <h3>Aside Panel</h3>
+      <p>Notifications, stats, or widgets go here.</p>
+    </aside>
+
+    <footer class="footer">
+      Dashboard Footer
+    </footer>
+  </div>
+
+</body>
+</html>
