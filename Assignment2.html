@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Grid Named Areas Layout</title>
+  <style>
+    .container {
+      display: grid;
+
+      /* Define grid structure using fr units */
+      grid-template-columns: 1fr 3fr;
+      grid-template-rows: 1fr 4fr 1fr;
+
+      /* Named grid areas */
+      grid-template-areas:
+        "header header"
+        "sidebar main"
+        "footer footer";
+
+      gap: 10px;
+      height: 100vh;
+    }
+
+    .header {
+      grid-area: header;
+      background-color: #4CAF50;
+      color: white;
+      padding: 20px;
+    }
+
+    .sidebar {
+      grid-area: sidebar;
+      background-color: #2196F3;
+      color: white;
+      padding: 20px;
+    }
+
+    .main {
+      grid-area: main;
+      background-color: #f4f4f4;
+      padding: 20px;
+    }
+
+    .footer {
+      grid-area: footer;
+      background-color: #333;
+      color: white;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="header">Header</div>
+    <div class="sidebar">Sidebar</div>
+    <div class="main">Main Content</div>
+    <div class="footer">Footer</div>
+  </div>
+
+</body>
+</html>
