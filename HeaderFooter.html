@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Layout Design</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+  background:#f5f5f5;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+}
+
+/* Outer container (thick border) */
+.container{
+  width:700px;
+  border:8px solid black;
+  padding:15px;
+  background:white;
+}
+
+/* Grid Layout */
+.grid-layout{
+  display:grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto 1fr auto;
+  gap:15px;
+}
+
+/* Header */
+.header{
+  border:3px solid #333;
+  padding:20px;
+  text-align:center;
+  font-size:28px;
+  color:#3b5e2b;
+}
+
+/* Navigation */
+.nav{
+  border:3px solid #333;
+  padding:20px;
+  text-align:center;
+  font-size:26px;
+  color:#3b5e2b;
+}
+
+/* Main Content Area */
+.main-section{
+  display:grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap:15px;
+}
+
+/* Side Content */
+.content{
+  border:3px solid #333;
+  padding:60px 20px;
+  text-align:center;
+  font-size:26px;
+  color:#3b5e2b;
+}
+
+/* Center Main Content */
+.main-content{
+  border:3px solid #333;
+  padding:80px 20px;
+  text-align:center;
+  font-size:28px;
+  color:#3b5e2b;
+}
+
+/* Footer */
+.footer{
+  border:3px solid #333;
+  padding:20px;
+  text-align:center;
+  font-size:26px;
+  color:#3b5e2b;
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+  <div class="grid-layout">
+    
+    <div class="header">Header</div>
+    
+    <div class="nav">Navigation Menu</div>
+    
+    <div class="main-section">
+      <div class="content">Content</div>
+      <div class="main-content">Main Content</div>
+      <div class="content">Content</div>
+    </div>
+    
+    <div class="footer">Footer</div>
+
+  </div>
+</div>
+
+</body>
+</html>
